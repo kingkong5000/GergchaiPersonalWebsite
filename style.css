@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 9999;
+    border: solid 1px tomato;
+    border-radius: 60px;
+    cursor: pointer;
+    color: tomato;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn.show:hover{
+    color: #fff;
+    background-color: tomato;
+}
+/*navbar*/
+.max-width{
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: auto;
+}
+.navbar{
+    /*background: darkblue;*/
+    width: 100%;
+    position: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 0px;
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+.navbar.sticky{
+    background: tomato;
+    padding: 15 0;
+    transition:all 0.5s ease;
+
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo .img{
+    width: auto;
+    height: 30px;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+}
+.navbar .logo .img.sticky{
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #ffff;
+}
+.navbar .logo a span{
+    color: tomato;
+    transition:all 0.5s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    transition:all 0.5s ease;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.navbar .menu li a{
+    color:#ffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: tomato;
+}
+.navbar.sticky .menu li a:hover{
+    color:darkred;
+}
+
+section .title{
+    position: relative;
+}
+/*Home*/
+.home{
+    display: flex;
+    background: url("images/bg1.png") no-repeat center ;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    /*position: relative;*/
+}
+.home .max-width{
+    margin: auto 0 auto 60px;
+}
+.home .home-content .text-1{
+    font-size: 26px;
+}
+.home .home-content .text-2{
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 36px;
+    font-weight: 400;
+}
+.home .home-content .text-3 span{
+    color: tomato;
+    font-weight: 600;
+}
+.home .home-content a{
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: solid 2px salmon;
+
+}
+.home .home-content a:hover{
+    color: tomato;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+/*about*/
+section{
+    padding: 100px 0;
+}
+.about, .contact, footer {
+    font-family: 'Poppin', sans-serif;
+    /*position: relative;
+    /*height: 100vh;*/
+}
+.about .title{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 80px;
+}
+
+.about .title::before{
+    content: "";
+    position:absolute;
+    width: 180px;
+    height:2px ;
+    background: tomato;
+    left: 50%;
+    top: 35px;
+    padding: 2px;
+    font-size: 20px;
+    color:black;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about .about-content .right{
+   /* background: rgb(206, 193, 193);*/
+    width: 60%;
+    margin-left: 40px;
+    justify-content: center;
+}
+.about .about-content .right .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+.about .about-content .right .text span{
+    color: tomato;
+}
+.about .about-content .right p{
+    text-align: justify;
+    line-height:1.6em ;
+}
+.about .about-content .right div{
+    margin-top: 20px;
+}
+.about .about-content .right div a{
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background: tomato;
+    align-items: center;
+    font-weight: 600;
+    border: solid 1px tomato;
+    transition: all 0.3s ease;
+}
+.about .about-content .right div a:hover{
+    color: tomato;
+    background: #fff;
+    border: solid 1px tomato;
+    transition: all 0.3s ease;
+}
+.about .about-content .right div a img{
+    width: 15px;
+    align-items: center;
+    margin-right: 5px;
+}
+/*Contact*/
+.contact{
+    font-family: 'Poppin', sans-serif;
+}
+.contact .title{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 80px;
+
+}
+/*.contact .title::before{
+    content: "";
+    position:absolute;
+    width: 180px;
+    height:2px ;
+    background: tomato;
+    left: 50%;
+    bottom: 0;
+    padding: 2px;
+    font-size: 20px;
+    color:black;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+.contact .title::after{
+    content: "Send Me E-mail";
+    position:absolute;
+    width: 180px;
+    height:2px ;
+    background: tomato;
+    left: 50%;
+    bottom: 0;
+    padding: 2px;
+    font-size: 20px;
+    color:black;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}*/
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .contact-content .column{
+    width: calc(50% - 40px);
+
+}
+.contact .contact-content .left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+}
+.contact .contact-content .left .text  .fa{
+    color: tomato;
+    margin-left: 10px;
+}
+.contact .contact-content .left p{
+    margin-bottom: 25px;
+}
+.contact .contact-content .left .icon{
+    margin: 10px 0;
+}
+.contact .contact-content .left .icon div{
+    display: flex;
+    align-items: center;
+    font-size:  20px;
+    margin-bottom: 5px;
+}
+.contact .contact-content .left .icon .fa{
+    color: tomato;
+    padding-right: 10px;
+}
+/*Right side*/
+.contact .contact-content .text{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content form .fields{
+    display: flex;
+}
+.contact .contact-content form .fields,
+.contact .contact-content form .field,
+.contact .contact-content form .button{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .contact-content form .textarea{
+    height: 70px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .contact-content form .field input,
+.contact .contact-content form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: solid 1px lightsalmon;
+    border-radius: 4px;
+    outline:none;
+    padding: 10px;
+}
+.contact .contact-content form .fields .name{
+    margin-right: 10px;
+}
+.contact .contact-content form .fields .email{
+    margin-left: 10px
+}
+.contact .contact-content form .button button{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-image: linear-gradient(to right, #F09819 0%, #ed8a5d  51%, #F09819  100%);
+    transition: 0.5s;
+    text-align: center;
+    background-size: 200% auto;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+ .contact .contact-content form .button button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+/*footer*/
+footer{
+    font-family: 'Poppins',sans-serif;
+    background: linear-gradient(to right, #F09819 0%, #ed8a5d  51%, #F09819  100%);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 70px;
+}
+footer span span{
+    padding-left: 10px;
+}
